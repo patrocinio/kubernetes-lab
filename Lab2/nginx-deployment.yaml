@@ -1,0 +1,20 @@
+apiVersion: apps/v1beta1 # use apps/v1 for Kubernetes release 1.9.0 and above
+kind: Deployment
+metadata:
+  name: nginx-deployment
+spec:
+  selector:
+    matchLabels:
+      app: nginx
+  replicas: 1 # tells deployment to run 1 pod matching the template
+  template: # create a pod using the pod definition provided in this template
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:1.7.9
+        ports:
+        - containerPort: 80
+
