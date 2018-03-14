@@ -5,3 +5,5 @@ do
  sleep 1
  OUT=$(netstat -an | grep :8443) 
 done
+
+echo Port 8443 open!
