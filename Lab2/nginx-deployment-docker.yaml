@@ -1,5 +1,4 @@
-#apiVersion: apps/v1beta1 # use apps/v1 for Kubernetes release 1.9.0 and above
-apiVersion: extensions/v1beta1
+apiVersion: extensions/v1beta1 # use apps/v1 for Kubernetes release 1.9.0 and above
 kind: Deployment
 metadata:
   name: nginx-deployment
